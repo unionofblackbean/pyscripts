@@ -6,7 +6,7 @@ import typing
 
 def uuid_to_current_name(uuid_: uuid.UUID) -> str:
     history = uuid_to_name_history(uuid_)
-    return history[0] if history else None
+    return history[-1] if history else None
 
 
 def uuid_to_name_history(uuid_: uuid.UUID) -> typing.List[str]:
